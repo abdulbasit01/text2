@@ -1,0 +1,219 @@
+html , body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    
+}
+:root{
+    --text-grey:#3f4954;
+
+
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+a{
+    text-decoration: none;
+    color:var(--text-grey);
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+button {
+    border-radius: 2rem;
+    background-color: #7a7999;
+    color: rgb(149, 38, 38);
+    border:none;
+    font-size: 9px;
+    text-transform: uppercase;
+    transition: 1000ms ease-in;
+    margin: 10px;
+}
+.nav-bar{
+    background-color: rgb(255, 255, 255);
+    padding: 0 2rem;
+    height: 0rem;
+    min-height: 15vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+
+}
+.nav-bar .nav-bar-brand a {
+    font-size: 1.6rem;
+    padding: 10px;
+    display: block;
+    margin: 10px;
+}
+.flex-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav-bar .nav-bar-menu{
+    justify-content: space-between;
+}
+.nav-bar .nav-bar-items .nav-bar-link{
+    padding: 1.6rem;
+}
+.nav-bar .social{
+    padding: 1.6rem;
+}
+.nav-bar .nav-bar-items .nav-bar-link:hover{
+    background-color: rgb(221, 193, 193);
+}
+.nav-bar .nav-bar-items .nav-bar-link a:hover{
+    color: #c2e9fb;
+}
+.nav-bar .social i {
+    padding: 10px;
+}
+
+.nav-bar .social i:hover{
+    color:#b9fbfb;
+}
+.nav-bar .toggle-container{
+    position: absolute;
+    top: 0%;
+    width: 80%;
+    cursor: pointer;
+    display: none;
+
+}
+
+.nav-bar .toggle-container i {
+    display: flex;
+    justify-content: flex-end;
+    padding:  1.7rem;
+
+}
+.collapse{
+    height: 30rem;
+}
+.nav-bar .toggle-container i:hover{
+    color: #b9fbfb;
+}
+
+@media only screen and (max-width:750px){
+    .nav-bar{
+        background-color: rgb(156, 146, 146);
+    }
+    .nav-bar .nav-bar-menu {
+        flex-direction: column;
+    }
+    .nav-bar .nav-bar-items{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-bar .social{
+        text-align: center;
+    }
+    .nav-bar .toggle-container{
+        display: initial;
+    }
+}
+
+/* site title main */
+main .site-title{
+    background-image: url('./assest/cover.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+main .site-title .site-background{
+    
+    padding: 10rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+main .site-title .site-background h3{
+    letter-spacing: 2rem;
+    font-weight: bolder;
+}
+main .site-title .site-background h1{
+    letter-spacing: 1rem;
+    font-weight: bolder;
+}
+
+main .site-title .site-background button {
+    border-radius: 2rem;
+    padding: 1rem;
+    width:10rem;
+    background-color: #5daf89;
+    color: rgb(149, 38, 38);
+    border:none;
+    font-size: 15px;
+    text-transform: uppercase;
+    transition: 1000ms ease-in;
+}
+
+main .site-title .site-background button:hover{
+    background-color: #145336;
+    color: #111;
+
+}
+/* blog */
+main .blog{
+    background-image: url('assest/Abract01.png');
+    background-repeat: no-repeat;
+    background-position: right  ;
+    width: 100%;
+}
+
+main .blog .blog-post .blog-content{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    margin:3rem 2rem;
+    box-shadow: 0 15px 20px rgba(0, 0, 0,0.3);
+    border-radius: 2rem;
+}
+
+main .blog .blog-post .blog-content .blog-title{
+    padding: 0 2rem;
+}
+main .site-content{
+    display: flex;
+    padding-top: 2rem;
+}
+main .site-content .side-bar{
+    flex: 3;
+}
+main .site-content .side-post{
+    flex: 1;
+}
+main .site-content .news-info{
+    background: var(--sky);
+    padding: 1rem;
+    position: absolute;
+    width: 200px;
+    border-radius:2rem;
+    margin: 0 auto;
+    top: 205vh;
+    opacity: 0;
+    transition: opacity 2s ease-in;
+}
+
+main .side-bar{
+    padding: 2rem;
+
+}
+
+main .site-content .side-bar .post-info{
+    padding:5rem;
+        display: flex;
+    flex-wrap: wrap;
+    text-align: center,justify;
+    width: 60%;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 15px 20px rgba(0, 0, 0,0.3);
+    height: fit-content;
+    border-radius: 2rem;
+    top: 10px;
+    bottom: 20px;
+
+}
